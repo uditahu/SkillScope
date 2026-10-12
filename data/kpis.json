@@ -1,0 +1,13 @@
+{
+  "bronze_postings": 1348454,
+  "silver_postings": 1348454,
+  "job_skill_rows": 26502626,
+  "distinct_skills": 2609217,
+  "companies": 90606,
+  "countries": 4,
+  "raw_size_mb": 1088.0,
+  "parquet_size_mb": 1355.0,
+  "date_min": "2024-01-12",
+  "date_max": "2024-01-17",
+  "spark_version": "3.5.1"
+}

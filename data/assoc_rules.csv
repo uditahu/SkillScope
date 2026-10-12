@@ -1,0 +1,41 @@
+antecedent,consequent,confidence,lift,support
+tensorflow,pytorch,0.802,14.12,0.05
+pytorch,tensorflow,0.88,14.12,0.05
+gcp,azure,0.794,9.63,0.05
+azure,gcp,0.607,9.63,0.05
+"hadoop, python",spark,0.825,8.69,0.055
+"spark, python",hadoop,0.627,8.47,0.055
+spark,hadoop,0.614,8.3,0.058
+hadoop,spark,0.788,8.3,0.058
+aws,gcp,0.441,7.0,0.053
+gcp,aws,0.845,7.0,0.053
+"java, python",scala,0.577,6.82,0.063
+"azure, python",aws,0.815,6.74,0.053
+"aws, python",azure,0.54,6.55,0.053
+"scala, python",java,0.787,6.46,0.063
+scala,java,0.769,6.31,0.065
+java,scala,0.534,6.31,0.065
+aws,azure,0.505,6.13,0.061
+azure,aws,0.74,6.13,0.061
+"power bi, python",tableau,0.762,4.59,0.053
+"power bi, data visualization",tableau,0.751,4.53,0.054
+"power bi, sql",tableau,0.709,4.28,0.068
+"data visualization, data analysis, sql",tableau,0.659,3.98,0.061
+"data visualization, python, sql",tableau,0.633,3.82,0.066
+"tableau, data visualization",power bi,0.519,3.74,0.054
+"data mining, sql",data visualization,0.776,3.72,0.052
+"tableau, data analysis, sql",data visualization,0.774,3.71,0.061
+"data visualization, sql",tableau,0.611,3.68,0.089
+"tableau, sql",power bi,0.508,3.66,0.068
+"tableau, python",power bi,0.504,3.63,0.053
+power bi,tableau,0.601,3.62,0.083
+tableau,power bi,0.503,3.62,0.083
+"data visualization, python",tableau,0.589,3.55,0.071
+"tableau, data analysis",data visualization,0.74,3.54,0.067
+"data analysis, python, sql",tableau,0.57,3.44,0.055
+tensorflow,machine learning,0.824,3.4,0.051
+data mining,data visualization,0.708,3.39,0.064
+"tableau, python, sql",data visualization,0.701,3.35,0.066
+"machine learning, sql",data science,0.479,3.27,0.054
+"data visualization, data analysis",tableau,0.541,3.26,0.067
+"tableau, python",data visualization,0.679,3.25,0.071

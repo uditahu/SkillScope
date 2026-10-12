@@ -1,0 +1,4 @@
+data_type,source,format,records
+Structured,linkedin_job_postings.csv,CSV columns,1348454
+Semi-structured,job_skills.csv,comma-separated lists,26502626
+Unstructured,job_summary.csv,free text,50000
