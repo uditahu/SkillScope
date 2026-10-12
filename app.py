@@ -6,7 +6,9 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-DATA = Path(__file__).parent / "data"
+# CSVs can sit in a data/ subfolder or next to app.py (GitHub web upload may flatten folders)
+HERE = Path(__file__).parent
+DATA = HERE / "data" if (HERE / "data" / "kpis.json").exists() else HERE
 st.set_page_config(page_title="SkillScope – Job Skill Demand", page_icon="📊", layout="wide")
 
 
@@ -61,8 +63,14 @@ with tab1:
 
     st.subheader("Skill-gap check: Data Analyst profile")
     gap = load("skill_gap")
-    st.dataframe(gap.style.apply(lambda r: ["background-color:#fde2e2" if r["have"] == "Gap" else "" for _ in r], axis=1),
-                 width="stretch", hide_index=True)
+    gap["have"] = gap["have"].map({"Yes": "✅ Have", "Gap": "❌ Gap"})
+    # translucent tints keep the cell text readable in both light and dark themes
+    tint = lambda v: ("background-color: rgba(229, 62, 62, 0.28); font-weight: 600" if "Gap" in v
+                      else "background-color: rgba(56, 161, 105, 0.22)")
+    st.dataframe(gap.style.map(tint, subset=["have"]), width="stretch", hide_index=True,
+                 column_config={"skill": "Skill", "postings": st.column_config.NumberColumn("Postings", format="%d"),
+                                "pct_of_da_postings": st.column_config.NumberColumn("% of Data Analyst postings", format="%.1f%%"),
+                                "have": "In my profile?"})
 
 with tab2:
     a, b = st.columns(2)
